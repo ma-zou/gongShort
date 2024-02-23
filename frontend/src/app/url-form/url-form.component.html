@@ -1,0 +1,12 @@
+<form>
+    <fieldset>
+        <div class="container">
+            <input type="text" placeholder="Enter URL" (input)="updateURL($event)">
+            <input type="text" placeholder="Generated Short URL" (input)="updateShortURL($event)">
+            <app-ui-button severity="success">Shorten</app-ui-button>
+        </div>
+    </fieldset>
+    <div ngIf="error" class="error">
+        {{ errorMessage }}
+    </div>
+</form>

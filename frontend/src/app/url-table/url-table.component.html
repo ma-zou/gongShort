@@ -1,0 +1,26 @@
+<div class="container">
+    <table>
+        <thead>
+            <tr>
+                <th>Original URL</th>
+                <th>Short URL</th>
+                <th>Clicks</th>
+                <th>Date Created</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Loop through your data and generate rows dynamically -->
+            <tr *ngFor="let url of urls">
+                <td><span>Original URL</span>{{ url.url }}</td>
+                <td><span>Short URL</span>{{ url.shortUrl }}</td>
+                <td><span>Clicks</span>{{ url.clicks }}</td>
+                <td><span>Created At</span>{{ getFormattedDate(url.createdAt) }}</td>
+                <td class="btnGroup">
+                    <app-ui-button severity="success">edit</app-ui-button>
+                    <app-ui-button severity="danger">delete</app-ui-button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

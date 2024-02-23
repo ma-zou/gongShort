@@ -1,0 +1,15 @@
+button {
+    padding: 8px 10px;
+    border-radius: .5rem;
+    border: none;
+    background: #205996;
+    color: var(--text-color);
+    font-size: 14px;
+}
+
+button.success {
+    background: #209673;
+}
+button.danger {
+    background: #962037;
+}

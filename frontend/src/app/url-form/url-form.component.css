@@ -1,0 +1,21 @@
+.container {
+    display: flex;
+    gap: .6rem;
+}
+
+fieldset {
+    appearance: none;
+    border: none;
+}
+
+input {
+    border: none;
+    padding: .5rem .8rem;
+    border-radius: .5rem;
+}
+
+.error {
+    font-size: 14px;
+    color: #962037;
+    margin-top: 10px;;
+}

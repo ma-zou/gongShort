@@ -1,0 +1,72 @@
+.container {
+    container: url-table / inline-size;
+    width: 100%;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+@media (min-width: 900px) {
+    .container {
+        min-width: 800px;
+    }
+}
+
+th {
+    font-size: 14px;
+    font-weight: 800;
+    padding-bottom: 1rem;
+    border-bottom: 2px var(--on-surface-color) solid;
+    text-align: left;
+}
+
+
+td {
+    padding-block: 1rem;
+}
+@container url-table (min-width: 700px) {
+    tbody tr:nth-child(even) {
+        background: var(--bg-color);
+    }
+    
+    td:first-child,
+    th:first-child {
+        padding-left: 1rem;
+    }
+    th:last-child,
+    td:last-child {
+        padding-left: 1rem;
+    }
+
+    td span {
+        display: none;
+    }
+}
+
+@container url-table (max-width: 700px) {
+    thead {
+        display: none;
+    }
+    tbody tr  {
+        display: flex;
+        flex-direction: column;
+        background: var(--bg-color);
+        padding: 1rem;
+        gap: 1rem;
+        border-radius: 10px;
+        margin-bottom: 10px;;
+    }
+    tbody tr td:not(:last-child) {
+        display: block;
+        flex-grow: 1;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    tbody tr td span {
+        font-weight: 800;
+    }
+}
